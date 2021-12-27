@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.child{
+    width: 100%;
+    height: 310px;
+    background: linear-gradient(to left, rgb(12, 0, 0), rgb(0, 0, 0), rgb(255, 230, 0));
+    left: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+.child1{
+    width: 100%;
+    height: 360px;
+    background-color: rgb(255, 230, 0);
+    left: 50px;
+}
+
+
+
+
+section{
+ 
+  left: 100px;
+   width: 35%;
+    border: 1px solid;
+    color: white;
+    
+    
+  
+}
+
+button{
+    text-align: center;
+    align-items: center;
+}
+
+
+label{
+    color: white;
+    text-align: center;
+}
+
+main.cards {
+    display: flex;
+    padding: 32px;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin-bottom: 16px 0;
+}
+
+main.cards section.card.contact button {
+    background: linear-gradient(to right, #fbff00, #000000);
+}
+main.cards section.card.shop button {
+    background: linear-gradient(to right, #000000, #ffee00);
+}
+main.cards section.card.about button {
+    background: linear-gradient(to right, #000000, #eeff00);
+}
+
+main.cards section.card.contact {
+    box-shadow: 20px 20px 50px -30px #000000;
+}
+main.cards section.card.shop {
+    box-shadow: 20px 20px 50px -30px #000000;
+}
+main.cards section.card.about {
+    box-shadow: 20px 20px 50px -30px #000000;
+}
+
+@media screen and (max-width: 720px) {
+    main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 10px;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+
+}
+
+span{
+    color: rgb(0, 0, 0);
+
+}
+
+h1{
+ color: white;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+
+img{
+    width: 14%;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: rgb(238, 255, 0);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 18px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(238, 255, 0);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
